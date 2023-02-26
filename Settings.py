@@ -1,0 +1,1 @@
+config = {'Database': {'user': 'cvandenberge', 'password': 'GSW@20080923ph!', 'host': '10.0.0.7'}, 'menu_options': [{'label': 'Database', 'command': 'GUI.new_window', 'index': 0}, {'label': 'Exit', 'command': 'root.quit', 'index': 1}]}

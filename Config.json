@@ -1,0 +1,255 @@
+{
+  "Databases": [
+    {
+      "name": "Postgresql",
+      "user": "cvandenberge",
+      "password": "GSW@20080923ph!",
+      "host": "10.0.0.7"
+    }
+  ],
+  "Windows": {
+    "Main": {
+      "title": "Stock Data Analysis",
+      "size": [
+        1200,
+        800
+      ],
+      "position": [
+        0,
+        0
+      ],
+      "menu": [
+        {
+          "label": "File",
+          "options": [
+            {
+              "label": "Settings",
+              "command": "self.create_new_window"
+            },
+            {
+              "label": "Save",
+              "command": "self.save_config"
+            },
+            {
+              "label": "Exit",
+              "command": "self.exit_program"
+            }
+          ]
+        }
+      ],
+      "style": {
+        "background": "white",
+        "font": {
+          "family": "Arial",
+          "size": 12,
+          "color": "black"
+        }
+      },
+      "widgets": [
+        {
+          "type": "Label",
+          "text": "Stock Data Analysis Dashboard",
+          "style": {
+            "font": {
+              "family": "Arial",
+              "size": 24,
+              "weight": "bold",
+              "color": "black"
+            },
+            "padding": [
+              20,
+              20,
+              20,
+              0
+            ]
+          }
+        },
+        {
+          "type": "Button",
+          "text": "Run Analysis",
+          "command": "self.run_analysis",
+          "style": {
+            "font": {
+              "family": "Arial",
+              "size": 16,
+              "color": "white"
+            },
+            "background": "blue",
+            "padding": [
+              10,
+              10
+            ],
+            "margin": [
+              20,
+              0
+            ]
+          }
+        },
+        {
+          "type": "Entry",
+          "text": "Enter stock symbol",
+          "style": {
+            "font": {
+              "family": "Arial",
+              "size": 12,
+              "color": "black"
+            },
+            "background": "white",
+            "padding": [
+              10,
+              10
+            ],
+            "margin": [
+              20,
+              0
+            ]
+          }
+        },
+        {
+          "type": "ListBox",
+          "items": [
+            "Apple Inc."
+          ],
+          "style": {
+            "font": {
+              "family": "Arial",
+              "size": 12,
+              "color": "black"
+            },
+            "background": "white",
+            "padding": [
+              10,
+              10
+            ],
+            "margin": [
+              20,
+              0
+            ]
+          }
+        },
+        {
+          "type": "Chart",
+          "data": [
+            {
+              "name": "Apple Inc.",
+              "values": [
+                10,
+                20,
+                30,
+                40,
+                50
+              ]
+            }
+          ],
+          "style": {
+            "background": "white",
+            "padding": [
+              20,
+              20
+            ]
+          }
+        }
+      ],
+      "tabs": [
+        {
+          "Data": {
+            "widgets": [
+              {
+                "type": "Label",
+                "text": "Select a stock to analyze:"
+              },
+              {
+                "type": "Combobox",
+                "options": [
+                  "AAPL",
+                  "MSFT",
+                  "AMZN"
+                ]
+              },
+              {
+                "type": "Button",
+                "text": "Get Data",
+                "command": "self.get_data"
+              },
+              {
+                "type": "Label",
+                "text": "Data Range:"
+              },
+              {
+                "type": "Radiobutton",
+                "text": "1 Year",
+                "value": "1y"
+              },
+              {
+                "type": "Radiobutton",
+                "text": "3 Years",
+                "value": "3y"
+              },
+              {
+                "type": "Radiobutton",
+                "text": "5 Years",
+                "value": "5y"
+              },
+              {
+                "type": "Button",
+                "text": "Calculate",
+                "command": "self.calculate"
+              }
+            ]
+          }
+        },
+        {
+          "Visualization": {
+            "widgets": [
+              {
+                "type": "Label",
+                "text": "Select a visualization type:"
+              },
+              {
+                "type": "Combobox",
+                "options": [
+                  "Line Chart",
+                  "Bar Chart",
+                  "Candlestick Chart"
+                ]
+              },
+              {
+                "type": "Button",
+                "text": "Create Visualization",
+                "command": "self.create_visualization"
+              }
+            ]
+          }
+        },
+        {
+          "Prediction": {
+            "widgets": [
+              {
+                "type": "Label",
+                "text": "Select a prediction algorithm:"
+              },
+              {
+                "type": "Combobox",
+                "options": [
+                  "Linear Regression",
+                  "Logistic Regression",
+                  "Random Forest"
+                ]
+              },
+              {
+                "type": "Button",
+                "text": "Train Model",
+                "command": "self.train_model"
+              },
+              {
+                "type": "Button",
+                "text": "Make Prediction",
+                "command": "self.make_prediction"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}
