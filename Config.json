@@ -45,111 +45,6 @@
           "color": "black"
         }
       },
-      "widgets": [
-        {
-          "type": "Label",
-          "text": "Stock Data Analysis Dashboard",
-          "style": {
-            "font": {
-              "family": "Arial",
-              "size": 24,
-              "weight": "bold",
-              "color": "black"
-            },
-            "padding": [
-              20,
-              20,
-              20,
-              0
-            ]
-          }
-        },
-        {
-          "type": "Button",
-          "text": "Run Analysis",
-          "command": "self.run_analysis",
-          "style": {
-            "font": {
-              "family": "Arial",
-              "size": 16,
-              "color": "white"
-            },
-            "background": "blue",
-            "padding": [
-              10,
-              10
-            ],
-            "margin": [
-              20,
-              0
-            ]
-          }
-        },
-        {
-          "type": "Entry",
-          "text": "Enter stock symbol",
-          "style": {
-            "font": {
-              "family": "Arial",
-              "size": 12,
-              "color": "black"
-            },
-            "background": "white",
-            "padding": [
-              10,
-              10
-            ],
-            "margin": [
-              20,
-              0
-            ]
-          }
-        },
-        {
-          "type": "ListBox",
-          "items": [
-            "Apple Inc."
-          ],
-          "style": {
-            "font": {
-              "family": "Arial",
-              "size": 12,
-              "color": "black"
-            },
-            "background": "white",
-            "padding": [
-              10,
-              10
-            ],
-            "margin": [
-              20,
-              0
-            ]
-          }
-        },
-        {
-          "type": "Chart",
-          "data": [
-            {
-              "name": "Apple Inc.",
-              "values": [
-                10,
-                20,
-                30,
-                40,
-                50
-              ]
-            }
-          ],
-          "style": {
-            "background": "white",
-            "padding": [
-              20,
-              20
-            ]
-          }
-        }
-      ],
       "tabs": [
         {
           "Data": {
@@ -245,6 +140,78 @@
                 "type": "Button",
                 "text": "Make Prediction",
                 "command": "self.make_prediction"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "Settings": {
+      "title": "Settings",
+      "size": [
+        500,
+        300
+      ],
+      "position": [
+        0,
+        0
+      ],
+      "menu": [
+
+      ],
+      "style": {
+        "background": "white",
+        "font": {
+          "family": "Arial",
+          "size": 12,
+          "color": "black"
+        }
+      },
+      "tabs": [
+        {
+          "Database": {
+            "widgets": [
+              {
+                "type": "Label",
+                "text": "Database Name:"
+              },
+              {
+                "type": "Entry",
+                "text": "",
+                "variable": "database_name"
+              },
+              {
+                "type": "Label",
+                "text": "Database User:"
+              },
+              {
+                "type": "Entry",
+                "text": "",
+                "variable": "database_user"
+              },
+              {
+                "type": "Label",
+                "text": "Database Password:"
+              },
+              {
+                "type": "Entry",
+                "text": "",
+                "variable": "database_password",
+                "show": "*"
+              },
+              {
+                "type": "Label",
+                "text": "Database Host:"
+              },
+              {
+                "type": "Entry",
+                "text": "",
+                "variable": "database_host"
+              },
+              {
+                "type": "Button",
+                "text": "Save Settings",
+                "command": "self.save_settings"
               }
             ]
           }
