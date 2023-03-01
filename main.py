@@ -1,5 +1,6 @@
 from GUI import GUI
-
+import tkinter as tk
+from DatabaseManager import DatabaseManager
 if __name__ == "__main__":
-    gui = GUI()
-    gui.run()
+    root = tk.Tk()
+    GUI = GUI(root)
