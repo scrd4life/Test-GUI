@@ -1,0 +1,10 @@
+function=ALL_COMMODITIES
+function=TREASURY_YIELD
+function=INFLATION
+function=RETAIL_SALES
+function=UNEMPLOYMENT
+
+function=SMA
+function=STOCHRSI
+function=BBANDS
+function=EMA
