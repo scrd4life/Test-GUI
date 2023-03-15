@@ -1,1 +1,1 @@
-{"Postgresql":{"name": "Postgresql" ,"user": "cvandenberge", "password": "GSW@20080923ph!", "host": "10.0.0.7","database":"kpi_test"}}
+{"Postgresql":{"name": "Postgresql" ,"user": "cvandenberge", "password": "GSW@20080923ph!", "host": "192.168.5.66","database":"kpi_test"}}

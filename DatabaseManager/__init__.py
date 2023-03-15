@@ -100,7 +100,7 @@ class DatabaseManager:
                         ticker_sentiment_score = ticker_sentiment["ticker_sentiment_score"]
                         cur.execute(f"INSERT INTO {symbol}_news (overall_sentiment_score, relevance_score, "
                                     f"ticker_sentiment_score, time_published) VALUES (%s, %s, %s, %s)",
-                                    (ticker, overall_sentiment_score, relevance_score, ticker_sentiment_score,
+                                    (overall_sentiment_score, relevance_score, ticker_sentiment_score,
                                      time_published))
 
             self.conn.commit()
